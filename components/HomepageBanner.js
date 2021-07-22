@@ -34,7 +34,6 @@ const HomepageBanner = () => {
           </ChildImageWrapper>
         </Right>
       </Container>
-      <h1>banner</h1>
     </Wrapper>
   );
 };
@@ -48,7 +47,6 @@ const Container = styled.div`
   margin: auto;
   /* background: aliceblue; */
   padding: 0px 10px;
-  min-height: 92vh;
   position: relative;
   padding-top: 20px;
   display: flex;
@@ -56,6 +54,7 @@ const Container = styled.div`
   flex-direction: column;
 
   @media (min-width: 768px) {
+    min-height: 92vh;
     padding-top: 50px;
     flex-direction: row;
   }
