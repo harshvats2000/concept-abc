@@ -20,7 +20,7 @@ const HomepageBanner = () => {
 
           <ChildrenImageWrapper>
             <Image
-              src="/children.svg"
+              src="/children.png"
               alt="children"
               width={300}
               height={315}

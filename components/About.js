@@ -7,10 +7,16 @@ const About = () => {
   return (
     <Wrapper>
       <Container>
-        <Heading level={1}>About Us</Heading>
+        <Heading level={2}>About Us</Heading>
         <Flex>
           <ImageWrapper>
-            <Image src="/about.svg" alt="children" height={250} width={450} />
+            <Image
+              src="/about.png"
+              alt="children holding abc"
+              height={250}
+              width={450}
+              quality={100}
+            />
           </ImageWrapper>
           <p>
             <strong>“Pursue what catches your heart not your eyes”.</strong>

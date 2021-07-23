@@ -48,7 +48,7 @@ const Facilities = () => {
         <Heading level={2}>Our Facilities</Heading>
         <List>
           {list.map(({ color, content }) => (
-            <Card key={color} data-bg={color}>
+            <Card data-aos="fade-up" key={color} data-bg={color}>
               {content}
             </Card>
           ))}
