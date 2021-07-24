@@ -48,7 +48,7 @@ const Facilities = () => {
         <Heading level={2}>Our Facilities</Heading>
         <List>
           {list.map(({ color, content }) => (
-            <Card data-aos="fade-up" key={color} data-bg={color}>
+            <Card key={color} data-bg={color}>
               {content}
             </Card>
           ))}
@@ -93,7 +93,8 @@ const List = styled.div`
 const Card = styled.p`
   background: ${(props) => props["data-bg"]};
   padding: 40px 20px;
-  margin: 0;
+  width: 250px;
+  margin: 0 auto;
   font-size: 22px;
   line-height: 35px;
   min-height: 200px;
