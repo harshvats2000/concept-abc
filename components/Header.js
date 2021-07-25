@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 
@@ -40,12 +40,15 @@ const links = [
 ];
 
 const Header = () => {
+  const [nav, setNav] = useState(false);
+
   React.useEffect(() => {
     const el = document.getElementById("header-nav");
     window.addEventListener("resize", (e) => {
       if (window.innerWidth > 768) {
         el.style.display = "flex";
       } else {
+        setNav(true);
         el.style.display = "none";
       }
     });
@@ -59,6 +62,8 @@ const Header = () => {
       el.style.display = "flex";
     }
   };
+
+  const doNothing = () => {};
 
   return (
     <Wrapper>
@@ -75,7 +80,7 @@ const Header = () => {
 
         <Nav id="header-nav">
           {links.map((link) => (
-            <li key={link.label}>
+            <li key={link.label} onClick={nav ? openMenu : doNothing}>
               <Link href={link.to}>
                 <a>{link.label}</a>
               </Link>
