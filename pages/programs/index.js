@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styled from "styled-components";
-import Heading from "../components/Heading";
+import Heading from "../../components/Heading";
 
 export default function Programs() {
   return (
@@ -9,24 +10,28 @@ export default function Programs() {
       <Container>
         <Heading level={2}>CHOOSE COURSE TYPE</Heading>
         <Content>
-          <ImageWrapper>
-            <Image
-              src="/kindergarten.png"
-              alt="children holding abc"
-              height={250}
-              width={450}
-              quality={100}
-            />
-          </ImageWrapper>
-          <ImageWrapper>
-            <Image
-              src="/certificate.png"
-              alt="children holding abc"
-              height={250}
-              width={450}
-              quality={100}
-            />
-          </ImageWrapper>
+          <Link href="/programs/kindergarten" passHref>
+            <ImageWrapper>
+              <Image
+                src="/kindergarten.png"
+                alt="children holding abc"
+                height={320}
+                width={450}
+                quality={100}
+              />
+            </ImageWrapper>
+          </Link>
+          <Link href="/programs/certificate-course" passHref>
+            <ImageWrapper>
+              <Image
+                src="/certificate.png"
+                alt="children holding abc"
+                height={320}
+                width={450}
+                quality={100}
+              />
+            </ImageWrapper>
+          </Link>
         </Content>
       </Container>
     </Wrapper>
@@ -60,6 +65,12 @@ const Content = styled.div`
 
 const ImageWrapper = styled.div`
   max-width: 450px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.05rem rgba(0, 0, 0, 0.42));
+  transition: filter 0.5s ease;
+  &:hover {
+    filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.42));
+  }
   @media (max-width: 1000px) {
     max-width: 400px;
   }

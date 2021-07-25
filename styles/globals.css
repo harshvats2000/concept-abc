@@ -6,6 +6,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Lato";
+  scroll-behavior: smooth;
+}
+
+form input,
+form textarea,
+form button {
+  font-family: "Lato";
 }
 
 a {

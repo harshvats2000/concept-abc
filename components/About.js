@@ -5,7 +5,7 @@ import Heading from "./Heading";
 
 const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <Container>
         <Heading level={2}>About Us</Heading>
         <Flex>

@@ -75,5 +75,11 @@ const Container = styled.div`
     background: linear-gradient(180deg, rgba(255, 0, 0, 0.28) 0%, #ba0000 100%);
     border-radius: 10px;
     margin-top: 40px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 768px) {
+    height: 720px;
   }
 `;

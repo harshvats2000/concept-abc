@@ -5,7 +5,7 @@ import Heading from "./Heading";
 
 const Vision = () => {
   return (
-    <Wrapper>
+    <Wrapper id="vision">
       <Container>
         <Heading level={2}>Our Vision</Heading>
         <Desc>
@@ -66,7 +66,10 @@ const ImageWrapper = styled.div`
   position: absolute;
   width: 600px;
   height: 600px;
-  top: 0;
+  top: 100px;
   right: 0;
   z-index: -1;
+  @media (max-width: 600px) {
+    width: 450px;
+  }
 `;

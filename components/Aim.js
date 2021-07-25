@@ -62,7 +62,8 @@ const AimImageWrapper = styled.div`
   right: 0;
   z-index: -1;
   @media (max-width: 1000px) {
-    top: 0;
+    width: 480px;
+    height: 480px;
   }
 `;
 
