@@ -10,15 +10,15 @@ const links = [
     label: "Home",
   },
   {
-    to: "/",
+    to: "/#about",
     label: "About",
   },
   {
-    to: "",
+    to: "/#vision",
     label: "Vision",
   },
   {
-    to: "",
+    to: "/programs",
     label: "Programs",
   },
   {
@@ -30,7 +30,7 @@ const links = [
     label: "Updates",
   },
   {
-    to: "",
+    to: "/patrons",
     label: "Patrons",
   },
   {

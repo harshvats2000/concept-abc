@@ -16,10 +16,11 @@ export default Heading;
 const El = styled.h1`
   text-align: center;
   font-family: "Rock Salt", cursive;
+  letter-spacing: 5px;
   font-size: ${(props) => {
-    if (props["data-level"] == 1) return "32px";
-    if (props["data-level"] == 2) return "28px";
-    if (props["data-level"] == 3) return "24px";
+    if (props["data-level"] == 1) return "28px";
+    if (props["data-level"] == 2) return "24px";
+    if (props["data-level"] == 3) return "22px";
   }};
 
   @media (min-width: 768px) {

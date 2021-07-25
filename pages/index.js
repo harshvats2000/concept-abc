@@ -5,6 +5,7 @@ import About from "../components/About";
 import Facilities from "../components/Facilities";
 import HomepageBanner from "../components/HomepageBanner";
 import Vision from "../components/Vision";
+import Aim from "../components/Aim";
 import WhyUs from "../components/WhyUs";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <HomepageBanner />
       <About />
       <Vision />
+      <Aim />
       <Facilities />
       <WhyUs />
     </div>
