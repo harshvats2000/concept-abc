@@ -12,6 +12,7 @@ export default function Form() {
   const handleFormParent = () => {
     setSchool(false);
   };
+
   return (
     <Wrapper>
       <Container>

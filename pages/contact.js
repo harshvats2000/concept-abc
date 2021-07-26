@@ -1,8 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
+import { useState } from "react";
 
 export default function Contact() {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const onChange = ({ target: { name, value } }) => {
+    setData({
+      [name]: value,
+    });
+  };
+
   return (
     <Wrapper>
       <Container>
@@ -21,20 +34,32 @@ export default function Contact() {
             <p>We’d love to hear from you. Here’s how you can reach us...</p>
           </Desc>
           <FormCard>
-            <form>
+            <form
+              method="POST"
+              action="https://formsubmit.co/info@digivats.com"
+            >
               <input
                 type="text"
                 placeholder="Full Name..."
-                autoComplete="name"
+                autoComplete="on"
                 required
+                name="name"
+                onChange={onChange}
               />
               <input
                 type="email"
                 placeholder="E-mail id..."
-                autoComplete="email"
+                autoComplete="on"
                 required
+                name="email"
+                onChange={onChange}
               />
-              <textarea rows="5" placeholder="Write a message..." />
+              <textarea
+                rows="5"
+                placeholder="Write a message..."
+                name="message"
+                onChange={onChange}
+              />
               <button type="submit">Submit</button>
             </form>
           </FormCard>

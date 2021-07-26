@@ -54,7 +54,7 @@ const Header = () => {
     });
   }, []);
 
-  const openMenu = () => {
+  const toggleMenu = () => {
     const el = document.getElementById("header-nav");
     if (el.style.display === "flex") {
       el.style.display = "none";
@@ -72,7 +72,7 @@ const Header = () => {
           <Image src={logo} alt="logo" />
         </Logo>
 
-        <MenuIcon onClick={openMenu}>
+        <MenuIcon onClick={toggleMenu}>
           <div />
           <div />
           <div />
@@ -80,7 +80,7 @@ const Header = () => {
 
         <Nav id="header-nav">
           {links.map((link) => (
-            <li key={link.label} onClick={nav ? openMenu : doNothing}>
+            <li key={link.label} onClick={nav ? toggleMenu : doNothing}>
               <Link href={link.to}>
                 <a>{link.label}</a>
               </Link>

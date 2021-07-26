@@ -30,7 +30,12 @@ const HomepageBanner = () => {
 
         <Right>
           <ChildImageWrapper>
-            <Image src="/homepageBannerChild.png" alt="child" layout="fill" />
+            <Image
+              src="/homepageBannerChild.png"
+              alt="child"
+              layout="fill"
+              loading="eager"
+            />
           </ChildImageWrapper>
         </Right>
       </Container>

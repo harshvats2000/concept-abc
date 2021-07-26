@@ -9,7 +9,8 @@ export default function Patrons() {
       id: 1,
       imgsrc: "/patrons1.png",
       name: "Mr. Apurba Dutta",
-      detail: "Ex. Principal ( Divisional Training School/ N.F Rly,Alipurduar)",
+      detail:
+        "Ex. Principal<br/> ( Divisional Training School/ N.F Rly, Alipurduar)",
       background:
         "linear-gradient(145.22deg, rgba(255, 37, 37, 0.44) 0%, #910000 100%)",
     },
@@ -26,24 +27,24 @@ export default function Patrons() {
       id: 3,
       imgsrc: "/patrons3.png",
       name: "Dr. Maitrayee Sur",
-      detail: "Senior Medical Officer/ Govt of Assam",
+      detail: "Senior Medical Officer<br/>Govt of Assam",
       background:
-        "linear-gradient(145.22deg, rgba(0, 181, 238, 0.5) 0%, rgba(0, 61, 80, 0.5) 100%)",
+        "linear-gradient(145.22deg, rgba(0, 181, 238, 0.5) 0%, rgba(0, 61, 80, 1) 100%)",
     },
     ,
     {
       id: 4,
       imgsrc: "/patrons4.png",
       name: "Mr. Kaushik Gurain",
-      detail: "Asst. Professor ( Mathematics) IIM, Bombay",
+      detail: "Asst. Professor ( Mathematics) <br/>IIM, Bombay",
       background:
-        "linear-gradient(145.22deg, rgba(251, 37, 255, 0.5) 0%, rgba(68, 0, 79, 0.5) 100%)",
+        "linear-gradient(145.22deg, rgba(251, 37, 255, 0.5) 0%, rgba(68, 0, 79, 0.8) 100%)",
     },
     {
       id: 5,
       imgsrc: "/patrons5.png",
       name: "Dr.Bivash Deb",
-      detail: "Director College Development Council Assam University",
+      detail: "Director College Development Council <br/>Assam University",
       background:
         "linear-gradient(145.22deg, rgba(16, 202, 57, 0.5) 0%, rgba(43, 64, 0, 0.5) 100%)",
     },
@@ -58,7 +59,7 @@ export default function Patrons() {
       id: 7,
       imgsrc: "/patrons7.png",
       name: "Mrs. ARPITA MITRA",
-      detail: "Founder ART MANIA WORLDWIDE",
+      detail: "Founder ART MANIA WORLDWIDE <br/> Govt. of Assam",
       background:
         "linear-gradient(145.22deg, rgba(255, 37, 37, 0.44) 0%, #910000 100%)",
     },
@@ -70,15 +71,17 @@ export default function Patrons() {
       <Container>
         {list.map((el) => (
           <Card key={el.id} background={el.background}>
-            <Image
-              src={el.imgsrc}
-              alt={el.name}
-              height="200px"
-              width="180px"
-              quality="100"
-            />
+            <ImageWrapper>
+              <Image
+                src={el.imgsrc}
+                alt={el.name}
+                height="200px"
+                width="180px"
+                quality="100"
+              />
+            </ImageWrapper>
             <h3>{el.name}</h3>
-            <p>{el.detail}</p>
+            <p dangerouslySetInnerHTML={{ __html: el.detail }} />
           </Card>
         ))}
       </Container>
@@ -97,11 +100,8 @@ const Container = styled.div`
 `;
 
 const Card = styled.div`
-  height: 380px;
+  min-height: 380px;
   width: 320px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: ${(props) => props.background};
   border-radius: 10px;
   padding: 10px 40px;
@@ -109,8 +109,16 @@ const Card = styled.div`
   color: white;
   h3 {
     margin: 0;
-    padding: 1rem;
-    line-height: 22px;
+    font-size: 24px;
     text-align: center;
   }
+  p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  text-align: center;
 `;
