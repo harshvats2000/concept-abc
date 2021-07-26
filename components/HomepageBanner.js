@@ -133,12 +133,14 @@ const Desc = styled.p`
 
 const Call = styled.a`
   display: block;
-  background: linear-gradient(180deg, rgba(255, 0, 0, 0.28) 0%, #ba0000 100%);
+  /* background: linear-gradient(180deg, rgba(255, 0, 0, 0.28) 0%, #ba0000 100%); */
+  background: #ba0000;
   border-radius: 5px;
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
-  width: 100px;
+  width: 200px;
   margin: 20px 0;
+  font-size: 22px;
   color: white;
   text-decoration: none;
   font-weight: 700;

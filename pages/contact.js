@@ -205,34 +205,30 @@ const Info = styled.div`
 `;
 
 const InfoCard = styled.div`
-  height: 300px;
-  width: 28%;
+  height: 250px;
+  width: 250px;
   padding: 40px 0px;
   background: #ffffff;
   border: 1px solid #000000;
-  box-sizing: border-box;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+  transition: 0.5s;
   z-index: 1;
+  display: grid;
+  place-items: center;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  &:hover {
+    box-shadow: 0px 100px 50px -30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+  }
 
   p {
     font-size: 24px;
     font-weight: 600;
   }
 
-  @media (max-width: 1000px) {
-    height: 260px;
-    p {
-      font-size: 22px;
-    }
-  }
   @media (max-width: 800px) {
-    width: 80%;
+    font-size: 22px;
     margin: auto;
     margin-bottom: 40px;
   }
