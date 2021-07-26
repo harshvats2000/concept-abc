@@ -23,7 +23,9 @@ export default function Form() {
           </Buttons>
           <ImageWrapper>
             <Image
+            blurDataURL="/formblur.png"
               src="/form.png"
+              placeholder="blur"
               alt="children waving"
               height={450}
               width={450}

@@ -8,6 +8,7 @@ export default function Patrons() {
     {
       id: 1,
       imgsrc: "/patrons1.png",
+      blurDataURL: "/patrons1blur.png",
       name: "Mr. Apurba Dutta",
       detail:
         "Ex. Principal<br/> ( Divisional Training School/ N.F Rly, Alipurduar)",
@@ -17,6 +18,7 @@ export default function Patrons() {
     {
       id: 2,
       imgsrc: "/patrons2.png",
+      blurDataURL: "/patrons2blur.png",
       name: "Mr. Rajesh Madan",
       detail:
         "Chairman Asha group of schools, & Secretary National Independent Pvt School Association,  Faridabad",
@@ -26,6 +28,7 @@ export default function Patrons() {
     {
       id: 3,
       imgsrc: "/patrons3.png",
+      blurDataURL: "/patrons3blur.png",
       name: "Dr. Maitrayee Sur",
       detail: "Senior Medical Officer<br/>Govt of Assam",
       background:
@@ -35,6 +38,7 @@ export default function Patrons() {
     {
       id: 4,
       imgsrc: "/patrons4.png",
+      blurDataURL: "/patrons4blur.png",
       name: "Mr. Kaushik Gurain",
       detail: "Asst. Professor ( Mathematics) <br/>IIM, Bombay",
       background:
@@ -43,6 +47,7 @@ export default function Patrons() {
     {
       id: 5,
       imgsrc: "/patrons5.png",
+      blurDataURL: "/patrons5blur.png",
       name: "Dr.Bivash Deb",
       detail: "Director College Development Council <br/>Assam University",
       background:
@@ -51,6 +56,7 @@ export default function Patrons() {
     {
       id: 6,
       imgsrc: "/patrons6.png",
+      blurDataURL: "/patrons6blur.png",
       name: "Mr. Tirthankar Bhadro ",
       detail: "Jyotish Shastri/ Numerologist",
       background: "linear-gradient(145.22deg, #2EFDFD 0%, #31D8D8 100%)",
@@ -58,6 +64,7 @@ export default function Patrons() {
     {
       id: 7,
       imgsrc: "/patrons7.png",
+      blurDataURL: "/patrons7blur.png",
       name: "Mrs. ARPITA MITRA",
       detail: "Founder ART MANIA WORLDWIDE <br/> Govt. of Assam",
       background:
@@ -73,11 +80,13 @@ export default function Patrons() {
           <Card key={el.id} background={el.background}>
             <ImageWrapper>
               <Image
+                blurDataURL={el.blurDataURL}
                 src={el.imgsrc}
                 alt={el.name}
                 height="200px"
                 width="180px"
                 quality="100"
+                placeholder="blur"
               />
             </ImageWrapper>
             <h3>{el.name}</h3>

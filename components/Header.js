@@ -40,15 +40,12 @@ const links = [
 ];
 
 const Header = () => {
-  const [nav, setNav] = useState(false);
-
   React.useEffect(() => {
     const el = document.getElementById("header-nav");
     window.addEventListener("resize", (e) => {
       if (window.innerWidth > 768) {
         el.style.display = "flex";
       } else {
-        setNav(true);
         el.style.display = "none";
       }
     });
@@ -60,6 +57,12 @@ const Header = () => {
       el.style.display = "none";
     } else {
       el.style.display = "flex";
+    }
+  };
+
+  const toggleMenuMobile = () => {
+    if (window.innerWidth < 768) {
+      toggleMenu();
     }
   };
 
@@ -80,7 +83,7 @@ const Header = () => {
 
         <Nav id="header-nav">
           {links.map((link) => (
-            <li key={link.label} onClick={nav ? toggleMenu : doNothing}>
+            <li key={link.label} onClick={toggleMenuMobile}>
               <Link href={link.to}>
                 <a>{link.label}</a>
               </Link>
