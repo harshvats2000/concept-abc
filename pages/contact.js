@@ -21,7 +21,9 @@ export default function Contact() {
       <Container>
         <ImageWrapper>
           <Image
+          blurDataURL="/aboutblur.png"
             src="/about.png"
+            placeholder="blur"
             alt="children holding abc"
             height={250}
             width={450}

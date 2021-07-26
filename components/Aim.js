@@ -25,7 +25,13 @@ const Aim = () => {
           <Image src="/aim.png" alt="aim" layout="fill" />
         </AimImageWrapper>
         <AbcImageWrapper>
-          <Image src="/abcAim.png" alt="abc" layout="fill" />
+          <Image
+            blurDataURL="/abcAimblur.png"
+            src="/abcAim.png"
+            alt="abc"
+            placeholder="blur"
+            layout="fill"
+          />
         </AbcImageWrapper>
       </Container>
     </Wrapper>

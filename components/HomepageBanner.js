@@ -20,7 +20,9 @@ const HomepageBanner = () => {
 
           <ChildrenImageWrapper>
             <Image
+            blurDataURL="/childrenblur.png"
               src="/children.png"
+              placeholder="blur"
               alt="children"
               width={300}
               height={315}
@@ -31,7 +33,9 @@ const HomepageBanner = () => {
         <Right>
           <ChildImageWrapper>
             <Image
+            blurDataURL="/homepageBannerChildblur.png"
               src="/homepageBannerChild.png"
+              placeholder="blur"
               alt="child"
               layout="fill"
               loading="eager"

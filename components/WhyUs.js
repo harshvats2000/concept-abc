@@ -9,7 +9,13 @@ const WhyUs = () => {
       <Container>
         <Heading level={2}>Why Choose Us?</Heading>
         <ImageWrapper>
-          <Image src="/whyus.png" alt="why choose concept ABC" layout="fill" />
+          <Image
+            blurDataURL="/whyusblur.png"
+            src="/whyus.png"
+            alt="why choose concept ABC"
+            layout="fill"
+            placeholder="blur"
+          />
         </ImageWrapper>
       </Container>
     </Wrapper>
