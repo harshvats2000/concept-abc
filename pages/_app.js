@@ -13,12 +13,18 @@ function MyApp({ Component, pageProps }) {
   //   AOS.init();
   // });
   return (
-    <>
+    <Wrapper>
       <Header />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </Wrapper>
   );
 }
 
 export default MyApp;
+
+const Wrapper = styled.div`
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+`;
