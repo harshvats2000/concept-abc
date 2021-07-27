@@ -22,11 +22,11 @@ const links = [
     label: "Programs",
   },
   {
-    to: "",
+    to: "/gallery",
     label: "Gallery",
   },
   {
-    to: "",
+    to: "/updates",
     label: "Updates",
   },
   {
@@ -65,8 +65,6 @@ const Header = () => {
       toggleMenu();
     }
   };
-
-  const doNothing = () => {};
 
   return (
     <Wrapper>

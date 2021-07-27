@@ -66,7 +66,7 @@ export default function Patrons() {
       imgsrc: "/patrons7.png",
       blurDataURL: "/patrons7blur.png",
       name: "Mrs. ARPITA MITRA",
-      detail: "Founder ART MANIA WORLDWIDE <br/> Govt. of Assam",
+      detail: "Founder ART MANIA WORLDWIDE",
       background:
         "linear-gradient(145.22deg, rgba(255, 37, 37, 0.44) 0%, #910000 100%)",
     },
