@@ -31,7 +31,7 @@ export default function Updates() {
                 blurDataURL={list.blurDataURL}
                 src={list.src}
                 placeholder="blur"
-                alt=""
+                alt={`updates` + list.id}
                 width={420}
                 height={280}
               />

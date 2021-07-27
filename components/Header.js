@@ -22,7 +22,7 @@ const links = [
     label: "Programs",
   },
   {
-    to: "",
+    to: "/gallery",
     label: "Gallery",
   },
   {

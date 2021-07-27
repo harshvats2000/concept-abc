@@ -20,7 +20,7 @@ const HomepageBanner = () => {
 
           <ChildrenImageWrapper>
             <Image
-            blurDataURL="/childrenblur.png"
+              blurDataURL="/childrenblur.png"
               src="/children.png"
               placeholder="blur"
               alt="children"
@@ -33,7 +33,7 @@ const HomepageBanner = () => {
         <Right>
           <ChildImageWrapper>
             <Image
-            blurDataURL="/homepageBannerChildblur.png"
+              blurDataURL="/homepageBannerChildblur.png"
               src="/homepageBannerChild.png"
               placeholder="blur"
               alt="child"
@@ -49,7 +49,10 @@ const HomepageBanner = () => {
 
 export default HomepageBanner;
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  max-width: 1200px;
+  margin: auto;
+`;
 
 const Container = styled.div`
   max-width: 1200px;
