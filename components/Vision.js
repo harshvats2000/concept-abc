@@ -48,6 +48,7 @@ export default Vision;
 const Wrapper = styled.section``;
 
 const Container = styled.div`
+  overflow: hidden;
   max-width: 1200px;
   margin: auto;
   padding: 50px 10px;
@@ -63,13 +64,16 @@ const Desc = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  position: absolute;
+  position: relative;
   width: 600px;
   height: 600px;
-  top: 100px;
-  right: 0;
+  margin-top: -450px;
+  margin-left: 50%;
   z-index: -1;
+
   @media (max-width: 600px) {
-    width: 450px;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: -650px;
   }
 `;

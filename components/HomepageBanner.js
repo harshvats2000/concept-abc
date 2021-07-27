@@ -116,6 +116,7 @@ const Concept = styled.p`
 
 const ABC = styled.h1`
   font-size: 80px;
+  line-height: 80px;
   letter-spacing: 3px;
   background: -webkit-linear-gradient(#ff7676, #b60000);
   -webkit-background-clip: text;
@@ -123,6 +124,7 @@ const ABC = styled.h1`
   margin: 0;
   @media (min-width: 768px) {
     font-size: 100px;
+    line-height: 100px;
   }
 `;
 
