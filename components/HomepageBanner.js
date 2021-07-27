@@ -49,15 +49,11 @@ const HomepageBanner = () => {
 
 export default HomepageBanner;
 
-const Wrapper = styled.section`
-  max-width: 1200px;
-  margin: auto;
-`;
+const Wrapper = styled.section``;
 
 const Container = styled.div`
   max-width: 1200px;
   margin: auto;
-  /* background: aliceblue; */
   padding: 0px 10px;
   position: relative;
   padding-top: 20px;
