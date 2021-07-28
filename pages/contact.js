@@ -68,33 +68,15 @@ export default function Contact() {
         </Card>
         <Info>
           <InfoCard>
-            <Image
-              src="/call.svg"
-              alt="call"
-              height={80}
-              width={80}
-              priority={true}
-            />
+            <Image src="/call.svg" alt="call" height={80} width={80} />
             <p>9953216500</p>
           </InfoCard>
           <InfoCard>
-            <Image
-              src="/mail.svg"
-              alt="mail"
-              height={80}
-              width={80}
-              priority={true}
-            />
+            <Image src="/mail.svg" alt="mail" height={80} width={80} />
             <p>info@digivats.com</p>
           </InfoCard>
           <InfoCard>
-            <Image
-              src="/facebook.svg"
-              alt="facebook"
-              height={60}
-              width={60}
-              priority={true}
-            />
+            <Image src="/facebook.svg" alt="facebook" height={60} width={60} />
             <p>Like us on Facebook</p>
           </InfoCard>
         </Info>
