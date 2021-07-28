@@ -3,38 +3,22 @@ import Image from "next/image";
 import Heading from "../components/Heading";
 import styled from "styled-components";
 
+const list = [
+  {
+    type: "video",
+    src: "/video1.mp4",
+    content:
+      "Webinar conducted on 23rd july 2021 by Ms. Anupama Chauhan on “How to conduct online classes more effectively with simple tools”.",
+  },
+];
+
 export default function Updates() {
-  const list = [
-    {
-      id: 1,
-      type: "img",
-      blurDataURL: "/updates1blur.png",
-      src: "/updates1.png",
-      content:
-        "Webinar conducted on 23rd july 2021 by Ms. Anupama Chauhan on “How to conduct online classes more effectively with simple tools”.",
-    },
-    {
-      id: 2,
-      type: "img",
-      blurDataURL: "/updates1blur.png",
-      src: "/updates1.png",
-      content:
-        "Webinar conducted on 23rd july 2021 by Ms. Anupama Chauhan on “How to conduct online classes more effectively with simple tools”.",
-    },
-    {
-      id: 3,
-      type: "video",
-      src: "/video1.mp4",
-      content:
-        "Webinar conducted on 23rd july 2021 by Ms. Anupama Chauhan on “How to conduct online classes more effectively with simple tools”.",
-    },
-  ];
   return (
     <Wrapper>
-      <Heading level={2}> LATEST UPDATES </Heading>
+      <Heading level={2}>UPDATES</Heading>
       <Container>
-        {list.map((list) => (
-          <Card key={list.id}>
+        {list.map((list, i) => (
+          <Card key={i}>
             {list.type === "img" ? (
               <ImageWrapper>
                 <Image
@@ -80,9 +64,9 @@ const Card = styled.div`
   align-items: center;
   margin-bottom: 60px;
   p {
-    font-size: 24px;
-    letter-spacing: 0.1em;
-    line-height: 24px;
+    font-size: 20px;
+    margin: 0;
+    line-height: 30px;
     padding: 0px 40px;
     @media (max-width: 768px) {
       width: 420px;
@@ -100,20 +84,14 @@ const Card = styled.div`
 
 const ImageWrapper = styled.div`
   min-width: 420px;
-  @media (max-width: 1000px) {
-    min-width: 350px;
-  }
-  @media (max-width: 500px) {
-    min-width: 90%;
+  @media (max-width: 768px) {
+    min-width: 100%;
   }
 `;
 
 const Video = styled.video`
   width: 420px;
-  @media (max-width: 1000px) {
-    width: 350px;
-  }
-  @media (max-width: 500px) {
-    width: 90%;
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;

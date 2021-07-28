@@ -3,15 +3,16 @@ import Image from "next/image";
 import Heading from "../components/Heading";
 import styled from "styled-components";
 
+const list = [
+  {
+    id: 1,
+    blurDataURL: "/gallery1blur.png",
+    src: "/gallery1.png",
+    alt: "certificate of appreciation",
+  },
+];
+
 export default function Gallery() {
-  const list = [
-    {
-      id: 1,
-      blurDataURL: "/gallery1blur.png",
-      src: "/gallery1.png",
-      alt: "certificate of appreciation",
-    },
-  ];
   return (
     <Wrapper>
       <Heading level={2}> GALLERY </Heading>

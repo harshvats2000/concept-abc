@@ -5,23 +5,23 @@ import Heading from "../../components/Heading";
 const list = [
   {
     color: "#FDE82E",
-    content: "NURSERY",
+    content: "Montessori Teachers Training",
   },
   {
     color: "#89FD2E",
-    content: "LOWER KG",
+    content: "Effective Classroom Management",
   },
   {
     color: "#2EFDFD",
-    content: "UPPER KG",
+    content: "Play way Methodology",
   },
 ];
 
-export default function kindergarten() {
+export default function CertificateCourses() {
   return (
     <Wrapper>
       <Container>
-        <Heading level={2}>KINDERGARTEN</Heading>
+        <Heading level={2}>CERTIFICATE COURSES</Heading>
         <List>
           {list.map(({ color, content }) => (
             <Card key={color} data-bg={color}>

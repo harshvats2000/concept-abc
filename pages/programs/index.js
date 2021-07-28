@@ -10,7 +10,7 @@ export default function Programs() {
       <Container>
         <Heading level={2}>CHOOSE COURSE TYPE</Heading>
         <Content>
-          <Link href="/programs/kindergarten" passHref>
+          <Link href="/programs/kindergarten_courses" passHref>
             <ImageWrapper>
               <Image
                 blurDataURL="/kindergartenblur.png"
@@ -23,7 +23,7 @@ export default function Programs() {
               />
             </ImageWrapper>
           </Link>
-          <Link href="/programs/certificate-course" passHref>
+          <Link href="/programs/certificate_courses" passHref>
             <ImageWrapper>
               <Image
                 blurDataURL="/certificateblur.png"

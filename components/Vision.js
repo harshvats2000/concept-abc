@@ -53,6 +53,10 @@ const Container = styled.div`
   margin: auto;
   padding: 50px 10px;
   position: relative;
+
+  @media (min-width: 768px) {
+    margin-bottom: -150px;
+  }
 `;
 
 const Desc = styled.div`
