@@ -7,6 +7,7 @@ export default function Updates() {
   const list = [
     {
       id: 1,
+      type: "img",
       blurDataURL: "/updates1blur.png",
       src: "/updates1.png",
       content:
@@ -14,8 +15,16 @@ export default function Updates() {
     },
     {
       id: 2,
+      type: "img",
       blurDataURL: "/updates1blur.png",
       src: "/updates1.png",
+      content:
+        "Webinar conducted on 23rd july 2021 by Ms. Anupama Chauhan on “How to conduct online classes more effectively with simple tools”.",
+    },
+    {
+      id: 3,
+      type: "video",
+      src: "/video1.mp4",
       content:
         "Webinar conducted on 23rd july 2021 by Ms. Anupama Chauhan on “How to conduct online classes more effectively with simple tools”.",
     },
@@ -26,16 +35,22 @@ export default function Updates() {
       <Container>
         {list.map((list) => (
           <Card key={list.id}>
-            <ImageWrapper>
-              <Image
-                blurDataURL={list.blurDataURL}
-                src={list.src}
-                placeholder="blur"
-                alt={`updates` + list.id}
-                width={420}
-                height={280}
-              />
-            </ImageWrapper>
+            {list.type === "img" ? (
+              <ImageWrapper>
+                <Image
+                  blurDataURL={list.blurDataURL}
+                  src={list.src}
+                  placeholder="blur"
+                  alt={`updates` + list.id}
+                  width={420}
+                  height={280}
+                />
+              </ImageWrapper>
+            ) : (
+              <Video controls>
+                <source src={list.src} />
+              </Video>
+            )}
             <p>{list.content}</p>
           </Card>
         ))}
@@ -90,5 +105,15 @@ const ImageWrapper = styled.div`
   }
   @media (max-width: 500px) {
     min-width: 90%;
+  }
+`;
+
+const Video = styled.video`
+  width: 420px;
+  @media (max-width: 1000px) {
+    width: 350px;
+  }
+  @media (max-width: 500px) {
+    width: 90%;
   }
 `;
