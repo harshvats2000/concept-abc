@@ -21,7 +21,7 @@ export default function Contact() {
       <Container>
         <ImageWrapper>
           <Image
-          blurDataURL="/aboutblur.png"
+            blurDataURL="/aboutblur.png"
             src="/about.png"
             placeholder="blur"
             alt="children holding abc"
@@ -105,7 +105,7 @@ const ImageWrapper = styled.div`
 
 const Card = styled.div`
   position: relative;
-  padding: 40px 20px;
+  padding: 40px 0px;
   margin: 0 auto;
   font-size: 22px;
   line-height: 35px;
