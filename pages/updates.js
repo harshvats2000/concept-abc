@@ -10,6 +10,15 @@ const list = [
     content:
       "Webinar conducted on 23rd july 2021 by Ms. Anupama Chauhan on “How to conduct online classes more effectively with simple tools”.",
   },
+  {
+    type: "img",
+    src: "/mini_philip.jpeg",
+    content: `Dear sir, 
+      Today's webinar on 'How To Conduct Online Classes Effective and Interesting with Simple Tools' was very useful. It will enable our staff to make their interactions with the students more lively and active. It's just an introduction to a new way of learning process. Yet it was more informative and helpful. 
+      Thank you  so much for your sharing.<br/> <strong style="float: right;">- Sr. Mini Philip</strong>`,
+    blurDataURL: "/mini_philip_blur.jpg",
+    alt: "Sr. Mini Philip",
+  },
 ];
 
 export default function Updates() {
@@ -25,9 +34,10 @@ export default function Updates() {
                   blurDataURL={list.blurDataURL}
                   src={list.src}
                   placeholder="blur"
-                  alt={`updates` + list.id}
-                  width={420}
-                  height={280}
+                  alt={list.alt}
+                  // width={420}
+                  // height={280}
+                  layout="fill"
                 />
               </ImageWrapper>
             ) : (
@@ -35,7 +45,7 @@ export default function Updates() {
                 <source src={list.src} />
               </Video>
             )}
-            <p>{list.content}</p>
+            <p dangerouslySetInnerHTML={{ __html: list.content }} />
           </Card>
         ))}
       </Container>
@@ -64,9 +74,9 @@ const Card = styled.div`
   align-items: center;
   margin-bottom: 60px;
   p {
-    font-size: 20px;
-    margin: 0;
-    line-height: 30px;
+    font-size: 22px;
+    margin: 10px 0 0;
+    line-height: 34px;
     padding: 0px 40px;
     @media (max-width: 768px) {
       width: 420px;
@@ -83,14 +93,16 @@ const Card = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  min-width: 420px;
+  position: relative;
+  min-width: 350px;
+  height: 350px;
   @media (max-width: 768px) {
     min-width: 100%;
   }
 `;
 
 const Video = styled.video`
-  width: 420px;
+  width: 350px;
   @media (max-width: 768px) {
     width: 100%;
   }
