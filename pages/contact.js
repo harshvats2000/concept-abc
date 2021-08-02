@@ -134,8 +134,6 @@ const Desc = styled.div`
   left: 80px;
   max-width: 280px;
   h1 {
-    font-family: "Rock Salt", cursive;
-    font-weight: normal;
     @media (max-width: 800px) {
       text-align: center;
     }

@@ -114,4 +114,7 @@ const Card = styled.p`
   place-items: center;
   border-radius: 8px;
   box-shadow: 0 10px 20px -4px rgb(0 0 0 / 30%);
+  &:hover {
+    transform: scale(1.1) !important;
+  }
 `;

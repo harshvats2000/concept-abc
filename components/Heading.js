@@ -20,8 +20,6 @@ export default Heading;
 
 const El = styled.h1`
   text-align: center;
-  font-family: "Rock Salt", cursive;
-  letter-spacing: 5px;
   color: ${(props) => props["data-color"]};
   font-size: ${(props) => {
     if (props["data-level"] == 1) return "28px";
@@ -31,9 +29,9 @@ const El = styled.h1`
 
   @media (min-width: 768px) {
     font-size: ${(props) => {
-      if (props["data-level"] == 1) return "40px";
-      if (props["data-level"] == 2) return "36px";
-      if (props["data-level"] == 3) return "32px";
+      if (props["data-level"] == 1) return "48px";
+      if (props["data-level"] == 2) return "40px";
+      if (props["data-level"] == 3) return "36px";
     }};
   }
 `;

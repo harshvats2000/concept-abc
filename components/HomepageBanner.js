@@ -50,7 +50,7 @@ const HomepageBanner = () => {
 export default HomepageBanner;
 
 const Wrapper = styled.section`
-  background: #ffa3a34a;
+  background: #fff06d;
 `;
 
 const Container = styled.div`
@@ -73,7 +73,7 @@ const Container = styled.div`
 const ChildrenImageWrapper = styled.div`
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -30px;
   z-index: -1;
   @media (max-width: 768px) {
     display: none;
@@ -92,7 +92,11 @@ const Left = styled.div`
   }
 `;
 
-const Right = styled.div``;
+const Right = styled.div`
+  @media (min-width: 768px) {
+    padding-top: 70px;
+  }
+`;
 
 const ChildImageWrapper = styled.div`
   position: relative;
@@ -100,8 +104,8 @@ const ChildImageWrapper = styled.div`
   height: 350px;
   margin: auto;
   @media (min-width: 768px) {
-    width: 420px;
-    height: 450px;
+    width: 450px;
+    height: 520px;
   }
 `;
 
@@ -113,6 +117,7 @@ const Concept = styled.p`
 
   @media (min-width: 768px) {
     margin-top: 60px;
+    font-size: 50px;
   }
 `;
 
@@ -125,8 +130,8 @@ const ABC = styled.h1`
   -webkit-text-fill-color: transparent;
   margin: 0;
   @media (min-width: 768px) {
-    font-size: 100px;
-    line-height: 100px;
+    font-size: 140px;
+    line-height: 140px;
   }
 `;
 
@@ -134,13 +139,13 @@ const Desc = styled.p`
   margin: 0;
   line-height: 30px;
   @media (min-width: 768px) {
-    font-size: 22px;
+    font-size: 24px;
+    line-height: 34px;
   }
 `;
 
 const Call = styled.a`
   display: block;
-  /* background: linear-gradient(180deg, rgba(255, 0, 0, 0.28) 0%, #ba0000 100%); */
   background: #ba0000;
   border-radius: 5px;
   padding: 15px 0;
@@ -150,7 +155,7 @@ const Call = styled.a`
   font-size: 22px;
   color: white;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 900;
   @media (max-width: 768px) {
     margin: 20px auto;
   }
