@@ -6,7 +6,6 @@ import Heading from "../components/Heading";
 export default function Patrons() {
   const list = [
     {
-      id: 1,
       imgsrc: "/patrons1.png",
       blurDataURL: "/patrons1blur.png",
       name: "Mr. Apurba Dutta",
@@ -16,7 +15,6 @@ export default function Patrons() {
         "linear-gradient(145.22deg, rgba(255, 37, 37, 0.44) 0%, #910000 100%)",
     },
     {
-      id: 2,
       imgsrc: "/patrons2.png",
       blurDataURL: "/patrons2blur.png",
       name: "Mr. Rajesh Madan",
@@ -26,7 +24,6 @@ export default function Patrons() {
         "linear-gradient(145.22deg, rgba(0, 234, 65, 0.5) 0%, #0D5B00 100%)",
     },
     {
-      id: 3,
       imgsrc: "/patrons3.png",
       blurDataURL: "/patrons3blur.png",
       name: "Dr. Maitrayee Sur",
@@ -36,7 +33,6 @@ export default function Patrons() {
     },
     ,
     {
-      id: 4,
       imgsrc: "/patrons4.png",
       blurDataURL: "/patrons4blur.png",
       name: "Mr. Kaushik Gurain",
@@ -45,28 +41,24 @@ export default function Patrons() {
         "linear-gradient(145.22deg, rgba(251, 37, 255, 0.5) 0%, rgba(68, 0, 79, 0.8) 100%)",
     },
     {
-      id: 5,
       imgsrc: "/patrons5.png",
       blurDataURL: "/patrons5blur.png",
       name: "Dr.Bivash Deb",
       detail: "Director College Development Council <br/>Assam University",
-      background:
-        "linear-gradient(145.22deg, rgba(16, 202, 57, 0.5) 0%, rgba(43, 64, 0, 0.5) 100%)",
+      background: "linear-gradient(145.22deg,#e09100 0%,#bd4e00 100%)",
     },
     {
-      id: 6,
       imgsrc: "/patrons6.png",
       blurDataURL: "/patrons6blur.png",
       name: "Mr. Tirthankar Bhadro ",
       detail: "Jyotish Shastri/ Numerologist",
-      background: "linear-gradient(145.22deg, #2EFDFD 0%, #31D8D8 100%)",
+      background: "linear-gradient(145.22deg, #5737D6 0%, #253898 100%)",
     },
     {
-      id: 7,
       imgsrc: "/patrons7.png",
       blurDataURL: "/patrons7blur.png",
       name: "Mrs. ARPITA MITRA",
-      detail: "Founder ART MANIA WORLDWIDE",
+      detail: "Founder <br/> ART MANIA WORLDWIDE",
       background:
         "linear-gradient(145.22deg, rgba(255, 37, 37, 0.44) 0%, #910000 100%)",
     },
@@ -76,12 +68,12 @@ export default function Patrons() {
     <Wrapper>
       <Heading level={2}>OUR PATRONS</Heading>
       <Container>
-        {list.map((el) => (
-          <Card key={el.id} background={el.background}>
+        {list.map((el, i) => (
+          <Card key={i} background={el.background} data-aos="zoom-in">
             <ImageWrapper>
               <Image
                 blurDataURL={el.blurDataURL}
-                src={el.imgsrc}
+                src={`/static${el.imgsrc}`}
                 alt={el.name}
                 height="200px"
                 width="180px"

@@ -8,7 +8,7 @@ const Aim = () => {
     <Wrapper>
       <Container>
         <Heading level={2}>Our Aim</Heading>
-        <Desc>
+        <Desc data-aos="fade-up">
           <p>
             Our aim at Concept ABC is to prepare the kid on the five principles
             of Concept ABC :
@@ -22,12 +22,12 @@ const Aim = () => {
           </p>
         </Desc>
         <AimImageWrapper>
-          <Image src="/aim.png" alt="aim" layout="fill" />
+          <Image src="/static/aim.png" alt="aim" layout="fill" />
         </AimImageWrapper>
         <AbcImageWrapper>
           <Image
-            blurDataURL="/abcAimblur.png"
-            src="/abcAim.png"
+            blurDataURL="/static/abcAimblur.png"
+            src="/static/abcAim.png"
             alt="abc"
             placeholder="blur"
             layout="fill"

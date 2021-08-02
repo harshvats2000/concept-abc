@@ -7,12 +7,14 @@ const About = () => {
   return (
     <Wrapper id="about">
       <Container>
-        <Heading level={2}>About Us</Heading>
+        <Heading color="white" level={2}>
+          About Us
+        </Heading>
         <Flex>
-          <ImageWrapper>
+          <ImageWrapper data-aos="fade-up">
             <Image
               blurDataURL="/aboutblur.png"
-              src="/about.png"
+              src="/static/about.png"
               placeholder="blur"
               alt="children holding abc"
               height={250}
@@ -20,11 +22,11 @@ const About = () => {
               quality={100}
             />
           </ImageWrapper>
-          <p>
+          <p data-aos="fade-up">
             <strong>“Pursue what catches your heart not your eyes”.</strong>
             <br />
-            <span style={{ color: "#FF0000" }}> Concept ABC</span> is the
-            thought, the heart, the soul of a few like minded forward thinking
+            <span style={{ color: "white" }}> Concept ABC</span> is the thought,
+            the heart, the soul of a few like minded forward thinking
             individuals who wanted to nurture young minds to lay a strong
             foundation for a better tomorrow. Focusing Activity based learning
             for concept building at a very low cost.
@@ -37,12 +39,17 @@ const About = () => {
 
 export default About;
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  background: #e83a59;
+`;
 
 const Container = styled.div`
   max-width: 1200px;
   margin: auto;
-  padding: 10px;
+  padding: 30px 10px;
+  > h2 {
+    margin-top: 0;
+  }
 `;
 
 const Flex = styled.div`
@@ -54,7 +61,7 @@ const Flex = styled.div`
   > div,
   > p {
     flex: 1;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 30px;
   }
 

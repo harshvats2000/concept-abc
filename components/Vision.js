@@ -7,8 +7,10 @@ const Vision = () => {
   return (
     <Wrapper id="vision">
       <Container>
-        <Heading level={2}>Our Vision</Heading>
-        <Desc>
+        <Heading level={2} color="white">
+          Our Vision
+        </Heading>
+        <Desc data-aos="fade-up">
           <p>
             Our vision at Concept ABC is to work on all the very important
             parameters which lay the foundation of a child&apos;s trait
@@ -35,9 +37,6 @@ const Vision = () => {
             need of today and the future.
           </p>
         </Desc>
-        <ImageWrapper>
-          <Image src="/vision.png" alt="vision" layout="fill" />
-        </ImageWrapper>
       </Container>
     </Wrapper>
   );
@@ -45,39 +44,35 @@ const Vision = () => {
 
 export default Vision;
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  background: linear-gradient(0, rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)),
+    url("/static/vision.jpg");
+  background-size: cover;
+  color: white;
+
+  @media (max-width: 768px) {
+    background-position: bottom;
+    p {
+      font-size: 18px !important;
+    }
+  }
+`;
 
 const Container = styled.div`
   overflow: hidden;
-  max-width: 1200px;
+  max-width: 800px;
   margin: auto;
-  padding: 50px 10px;
-  position: relative;
-
-  @media (min-width: 768px) {
-    margin-bottom: -150px;
+  padding: 30px 10px;
+  > h2 {
+    margin-top: 0;
   }
 `;
 
 const Desc = styled.div`
-  max-width: 800px;
+  max-width: 1000px;
+  margin: auto;
   p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 30px;
-  }
-`;
-
-const ImageWrapper = styled.div`
-  position: relative;
-  width: 600px;
-  height: 600px;
-  margin-top: -450px;
-  margin-left: 50%;
-  z-index: -1;
-
-  @media (max-width: 600px) {
-    width: 100%;
-    margin-left: 0%;
-    margin-top: -650px;
   }
 `;

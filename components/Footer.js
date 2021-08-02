@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <Wrapper>
-      <Image src="/footer.png" alt="" width={1600} height={350} />
+      <Image src="/static/footer.png" alt="" width={1600} height={350} />
     </Wrapper>
   );
 };

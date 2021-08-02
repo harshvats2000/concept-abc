@@ -134,7 +134,7 @@ const Nav = styled.ul`
     display: none;
     flex-direction: column;
     position: absolute;
-    width: 100vw;
+    width: 100%;
     top: 60px;
     z-index: 10;
     background: white;

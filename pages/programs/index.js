@@ -13,8 +13,8 @@ export default function Programs() {
           <Link href="/programs/kindergarten_courses" passHref>
             <ImageWrapper>
               <Image
-                blurDataURL="/kindergartenblur.png"
-                src="/kindergarten.png"
+                blurDataURL="/static/kindergartenblur.png"
+                src="/static/kindergarten.png"
                 alt="children holding abc"
                 placeholder="blur"
                 height={320}
@@ -26,8 +26,8 @@ export default function Programs() {
           <Link href="/programs/certificate_courses" passHref>
             <ImageWrapper>
               <Image
-                blurDataURL="/certificateblur.png"
-                src="/certificate.png"
+                blurDataURL="/static/certificateblur.png"
+                src="/static/certificate.png"
                 alt="children holding abc"
                 placeholder="blur"
                 height={320}

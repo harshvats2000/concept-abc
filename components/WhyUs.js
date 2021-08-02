@@ -7,11 +7,13 @@ const WhyUs = () => {
   return (
     <Wrapper>
       <Container>
-        <Heading level={2}>Why Choose Us?</Heading>
+        <Heading level={2} color="#e83a59">
+          Why Choose Us?
+        </Heading>
         <ImageWrapper>
           <Image
-            blurDataURL="/whyusblur.png"
-            src="/whyus.png"
+            blurDataURL="/static/whyusblur.png"
+            src="/static/whyus.png"
             alt="why choose concept ABC"
             layout="fill"
             placeholder="blur"

@@ -7,6 +7,7 @@ export default function Contact() {
   const [data, setData] = useState({
     name: "",
     email: "",
+    number: "",
     message: "",
   });
 
@@ -21,8 +22,8 @@ export default function Contact() {
       <Container>
         <ImageWrapper>
           <Image
-            blurDataURL="/aboutblur.png"
-            src="/about.png"
+            blurDataURL="/static/aboutblur.png"
+            src="/static/about.png"
             placeholder="blur"
             alt="children holding abc"
             height={250}
@@ -35,7 +36,7 @@ export default function Contact() {
             <h1>Contact</h1>
             <p>We’d love to hear from you. Here’s how you can reach us...</p>
           </Desc>
-          <FormCard>
+          <FormCard data-aos="fade-up">
             <form
               method="POST"
               action="https://formsubmit.co/info@digivats.com"
@@ -56,6 +57,14 @@ export default function Contact() {
                 name="email"
                 onChange={onChange}
               />
+              <input
+                type="tel"
+                placeholder="Contact number..."
+                autoComplete="on"
+                required
+                name="number"
+                onChange={onChange}
+              />
               <textarea
                 rows="5"
                 placeholder="Write a message..."
@@ -67,16 +76,21 @@ export default function Contact() {
           </FormCard>
         </Card>
         <Info>
-          <InfoCard>
-            <Image src="/call.svg" alt="call" height={80} width={80} />
-            <p>9953216500</p>
+          <InfoCard data-aos="zoom-out">
+            <Image src="/static/call.svg" alt="call" height={80} width={80} />
+            <p>8851956401</p>
           </InfoCard>
-          <InfoCard>
-            <Image src="/mail.svg" alt="mail" height={80} width={80} />
+          <InfoCard data-aos="zoom-out">
+            <Image src="/static/mail.svg" alt="mail" height={80} width={80} />
             <p>info@digivats.com</p>
           </InfoCard>
-          <InfoCard>
-            <Image src="/facebook.svg" alt="facebook" height={60} width={60} />
+          <InfoCard data-aos="zoom-out">
+            <Image
+              src="/static/facebook.svg"
+              alt="facebook"
+              height={60}
+              width={60}
+            />
             <p>Like us on Facebook</p>
           </InfoCard>
         </Info>

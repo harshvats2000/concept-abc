@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 const list = [
   {
-    id: 1,
     blurDataURL: "/gallery1blur.png",
     src: "/gallery1.png",
     alt: "certificate of appreciation",
@@ -17,11 +16,11 @@ export default function Gallery() {
     <Wrapper>
       <Heading level={2}> GALLERY </Heading>
       <Container>
-        {list.map((list) => (
-          <ImageWrapper key={list.id}>
+        {list.map((list, i) => (
+          <ImageWrapper key={i}>
             <Image
               blurDataURL={list.blurDataURL}
-              src={list.src}
+              src={`/static${list.src}`}
               alt={list.alt}
               placeholder="blur"
               width={1000}

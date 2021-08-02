@@ -32,17 +32,15 @@ export default function Updates() {
               <ImageWrapper>
                 <Image
                   blurDataURL={list.blurDataURL}
-                  src={list.src}
+                  src={`/static${list.src}`}
                   placeholder="blur"
                   alt={list.alt}
-                  // width={420}
-                  // height={280}
                   layout="fill"
                 />
               </ImageWrapper>
             ) : (
               <Video controls>
-                <source src={list.src} />
+                <source src={`/static${list.src}`} />
               </Video>
             )}
             <p dangerouslySetInnerHTML={{ __html: list.content }} />

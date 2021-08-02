@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Image from "next/image";
 import Heading from "../../components/Heading";
 
 const list = [
@@ -29,6 +30,15 @@ export default function CertificateCourses() {
             </Card>
           ))}
         </List>
+
+        <ImageWrapper>
+          <Image
+            src="/static/certificate_post.png"
+            alt=""
+            width={500}
+            height={700}
+          />
+        </ImageWrapper>
       </Container>
     </Wrapper>
   );
@@ -81,4 +91,9 @@ const Card = styled.p`
   &:nth-of-type(even) {
     transform: rotate(5deg);
   }
+`;
+
+const ImageWrapper = styled.div`
+  padding: 40px 0 20px;
+  text-align: center;
 `;

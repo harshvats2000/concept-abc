@@ -6,22 +6,22 @@ const HomepageBanner = () => {
   return (
     <Wrapper>
       <Container>
-        <Left>
+        <Left data-aos="fade-in">
           <Concept>CONCEPT</Concept>
 
           <ABC>ABC</ABC>
 
           <Desc>
             Nurturing Future minds <br />
-            India&apos;s Fastest growing pre-school concept
+            India&apos;s Fastest Growing Pre-School Concept
           </Desc>
 
-          <Call href="tel:+91">Call Now</Call>
+          <Call href="tel:8851956401">Call Now</Call>
 
-          <ChildrenImageWrapper>
+          <ChildrenImageWrapper data-aos="zoom-out">
             <Image
               blurDataURL="/childrenblur.png"
-              src="/children.png"
+              src="/static/children.png"
               placeholder="blur"
               alt="children"
               width={300}
@@ -31,10 +31,10 @@ const HomepageBanner = () => {
         </Left>
 
         <Right>
-          <ChildImageWrapper>
+          <ChildImageWrapper data-aos="fade-up">
             <Image
               blurDataURL="/homepageBannerChildblur.png"
-              src="/homepageBannerChild.png"
+              src="/static/homepageBannerChild.png"
               placeholder="blur"
               alt="child"
               layout="fill"
@@ -49,12 +49,14 @@ const HomepageBanner = () => {
 
 export default HomepageBanner;
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  background: #ffa3a34a;
+`;
 
 const Container = styled.div`
   max-width: 1200px;
   margin: auto;
-  padding: 0px 10px;
+  padding: 0px 10px 10px;
   position: relative;
   padding-top: 20px;
   display: flex;

@@ -20,24 +20,24 @@ const list = [
     content: "Regular seminars and webinars for parents.",
   },
   {
-    color: "rgba(46, 179, 253, 0.52)",
-    content: "Complete guidance regarding setting up the school.",
-  },
-  {
-    color: "rgba(252, 31, 31, 0.58)",
-    content: "Academic calendar, functions of the school.",
-  },
-  {
     color: "rgba(253, 232, 46, 1)",
     content: "Free ART & MUSIC classes for the kids.",
   },
   {
-    color: "rgba(46, 253, 253, 1)",
-    content: "Helping in recruiting of qualified staff.",
+    color: "#F4BE2C",
+    content: "Daily basis classwork and homework.",
+  },
+  {
+    color: "#FF6263",
+    content: "Special care for absentees/slow learners.",
+  },
+  {
+    color: "#02B290",
+    content: "Activity based concept building.",
   },
   {
     color: "rgba(137, 253, 46, 1)",
-    content: "Any other support required by school.",
+    content: "Value based educational concept.",
   },
 ];
 
@@ -48,7 +48,12 @@ const Facilities = () => {
         <Heading level={2}>Our Facilities</Heading>
         <List>
           {list.map(({ color, content }) => (
-            <Card key={color} data-bg={color}>
+            <Card
+              key={color}
+              data-bg={color}
+              data-aos="flip-up"
+              data-aos-delay="5000"
+            >
               {content}
             </Card>
           ))}
@@ -60,12 +65,19 @@ const Facilities = () => {
 
 export default Facilities;
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  background: #92dcff;
+`;
 
 const Container = styled.div`
   max-width: 1200px;
   margin: auto;
-  padding: 0 10px;
+  padding: 30px 10px;
+  margin-top: 10px;
+
+  h2 {
+    margin-top: 0;
+  }
 `;
 
 const List = styled.div`
@@ -100,10 +112,6 @@ const Card = styled.p`
   min-height: 200px;
   display: grid;
   place-items: center;
-  &:nth-of-type(odd) {
-    transform: rotate(-5deg);
-  }
-  &:nth-of-type(even) {
-    transform: rotate(5deg);
-  }
+  border-radius: 8px;
+  box-shadow: 0 10px 20px -4px rgb(0 0 0 / 30%);
 `;
