@@ -62,6 +62,14 @@ export default function Patrons() {
       background:
         "linear-gradient(145.22deg, rgba(255, 37, 37, 0.44) 0%, #910000 100%)",
     },
+    {
+      imgsrc: "/patrons8.png",
+      blurDataURL: "/patrons7blur.png",
+      name: "Mr. Abhra Das",
+      detail: "National Quiz Master",
+      background:
+        "linear-gradient(145.22deg, rgba(0, 234, 65, 0.5) 0%, #0D5B00 100%)",
+    },
   ];
 
   return (
@@ -122,4 +130,6 @@ const Card = styled.div`
 
 const ImageWrapper = styled.div`
   text-align: center;
+  /* max-width: 180px;
+  max-height: 200px; */
 `;

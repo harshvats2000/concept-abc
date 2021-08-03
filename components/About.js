@@ -25,11 +25,14 @@ const About = () => {
           <p data-aos="fade-up">
             <strong>“Pursue what catches your heart not your eyes”.</strong>
             <br />
-            <span style={{ color: "white" }}> Concept ABC</span> is the thought,
-            the heart, the soul of a few like minded forward thinking
-            individuals who wanted to nurture young minds to lay a strong
-            foundation for a better tomorrow. Focusing Activity based learning
-            for concept building at a very low cost.
+            <span style={{ color: "#00fa4e", fontWeight: "bold" }}>
+              {" "}
+              Concept ABC
+            </span>{" "}
+            is the thought, the heart, the soul of a few like minded forward
+            thinking individuals who wanted to nurture young minds to lay a
+            strong foundation for a better tomorrow. Focusing Activity based
+            learning for concept building at a very low cost.
           </p>
         </Flex>
       </Container>
@@ -47,6 +50,7 @@ const Container = styled.div`
   max-width: 1200px;
   margin: auto;
   padding: 30px 10px;
+  color: white;
   > h2 {
     margin-top: 0;
   }
