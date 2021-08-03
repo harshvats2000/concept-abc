@@ -50,9 +50,9 @@ export default function Patrons() {
     {
       imgsrc: "/patrons6.png",
       blurDataURL: "/patrons6blur.png",
-      name: "Mr. Tirthankar Bhadro ",
+      name: "Mr. Tirthankar Bhadra",
       detail: "Jyotish Shastri/ Numerologist",
-      background: "linear-gradient(145.22deg, #5737D6 0%, #253898 100%)",
+      background: "linear-gradient(145.22deg,#f777ff 0%,#7d0075 100%)",
     },
     {
       imgsrc: "/patrons7.png",
