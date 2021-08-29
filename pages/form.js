@@ -3,6 +3,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import SchoolForm from "../components/schoolForm.js";
 import ParentForm from "../components/parentForm.js";
+import Head from "next/head";
 
 export default function Form() {
   const [school, setSchool] = useState(true);
@@ -15,6 +16,9 @@ export default function Form() {
 
   return (
     <Wrapper>
+      <Head>
+        <title>Admission Form - Concept ABC</title>
+      </Head>
       <Container>
         <Tab>
           <Buttons school={school}>
@@ -23,7 +27,7 @@ export default function Form() {
           </Buttons>
           <ImageWrapper>
             <Image
-            blurDataURL="/formblur.png"
+              blurDataURL="/formblur.png"
               src="/form.png"
               placeholder="blur"
               alt="children waving"
@@ -88,7 +92,7 @@ const Buttons = styled.div`
     font-weight: 600;
     padding: 20px 10px;
     border-radius: 5px;
-    transition: background 0.5s ease;
+    transition: 0.5s;
     @media (max-width: 768px) {
       width: 50%;
       text-align: center;

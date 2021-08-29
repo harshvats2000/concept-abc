@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Heading from "../components/Heading";
 import styled from "styled-components";
+import Head from "next/head";
 
 const list = [
   {
@@ -24,6 +25,7 @@ const list = [
 export default function Updates() {
   return (
     <Wrapper>
+      <Head>Update - Concept ABC</Head>
       <Heading level={2}>UPDATES</Heading>
       <Container>
         {list.map((list, i) => (

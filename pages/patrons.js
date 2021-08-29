@@ -2,6 +2,10 @@ import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
 import Heading from "../components/Heading";
+import Head from "next/head";
+import About from "../components/About";
+import Vision from "../components/Vision";
+import WhyUs from "../components/WhyUs";
 
 export default function Patrons() {
   const list = [
@@ -74,6 +78,9 @@ export default function Patrons() {
 
   return (
     <Wrapper>
+      <Head>
+        <title>Our Patrons - Concept ABC</title>
+      </Head>
       <Heading level={2}>OUR PATRONS</Heading>
       <Container>
         {list.map((el, i) => (
@@ -94,6 +101,9 @@ export default function Patrons() {
           </Card>
         ))}
       </Container>
+      <About />
+      <Vision />
+      <WhyUs />
     </Wrapper>
   );
 }
@@ -102,7 +112,7 @@ const Wrapper = styled.section``;
 
 const Container = styled.div`
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto 50px;
   padding: 0 10px;
   display: flex;
   flex-wrap: wrap;
@@ -130,6 +140,4 @@ const Card = styled.div`
 
 const ImageWrapper = styled.div`
   text-align: center;
-  /* max-width: 180px;
-  max-height: 200px; */
 `;

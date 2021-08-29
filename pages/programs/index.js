@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 import Heading from "../../components/Heading";
+import About from "../../components/About";
+import Vision from "../../components/Vision";
+import WhyUs from "../../components/WhyUs";
 
 export default function Programs() {
   return (
@@ -38,6 +41,9 @@ export default function Programs() {
           </Link>
         </Content>
       </Container>
+      <About />
+      <Vision />
+      <WhyUs />
     </Wrapper>
   );
 }
@@ -46,7 +52,7 @@ const Wrapper = styled.section``;
 
 const Container = styled.div`
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto 70px;
   padding: 0 10px;
 `;
 

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function Contact() {
   const [data, setData] = useState({
@@ -19,6 +20,9 @@ export default function Contact() {
 
   return (
     <Wrapper>
+      <Head>
+        <title>Contact - Concept ABC</title>
+      </Head>
       <Container>
         <ImageWrapper>
           <Image
@@ -76,15 +80,15 @@ export default function Contact() {
           </FormCard>
         </Card>
         <Info>
-          <InfoCard data-aos="zoom-out">
+          <InfoCard data-aos="zoom-out" href="tel:8851956401">
             <Image src="/static/call.svg" alt="call" height={80} width={80} />
             <p>8851956401</p>
           </InfoCard>
-          <InfoCard data-aos="zoom-out">
+          <InfoCard data-aos="zoom-out" href="mailto:conceptabc9@gmail.com">
             <Image src="/static/mail.svg" alt="mail" height={80} width={80} />
-            <p>info@digivats.com</p>
+            <p>conceptabc9@gmail.com</p>
           </InfoCard>
-          <InfoCard data-aos="zoom-out">
+          <InfoCard data-aos="zoom-out" href="https://facebook.com">
             <Image
               src="/static/facebook.svg"
               alt="facebook"
@@ -218,26 +222,26 @@ const Info = styled.div`
   }
 `;
 
-const InfoCard = styled.div`
+const InfoCard = styled.a`
   height: 250px;
-  width: 250px;
+  width: 280px;
   padding: 40px 0px;
   background: #ffffff;
   border: 1px solid #000000;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  transition: 0.5s;
+  transition: 0.5s !important;
   z-index: 1;
   display: grid;
   place-items: center;
 
   &:hover {
     box-shadow: 0px 100px 50px -30px rgba(0, 0, 0, 0.15);
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.05) !important;
   }
 
   p {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
   }
 
