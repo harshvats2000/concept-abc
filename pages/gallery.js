@@ -6,9 +6,36 @@ import Head from "next/head";
 
 const list = [
   {
-    blurDataURL: "/gallery1blur.png",
     src: "/gallery1.png",
     alt: "certificate of appreciation",
+  },
+  {
+    src: "/gallery2.jpeg",
+    alt: "",
+  },
+  {
+    src: "/gallery3.jpeg",
+    alt: "",
+  },
+  {
+    src: "/gallery4.jpeg",
+    alt: "",
+  },
+  {
+    src: "/gallery5.jpeg",
+    alt: "",
+  },
+  {
+    src: "/gallery6.jpeg",
+    alt: "",
+  },
+  {
+    src: "/gallery6.jpeg",
+    alt: "",
+  },
+  {
+    src: "/gallery7.jpeg",
+    alt: "",
   },
 ];
 
@@ -23,12 +50,10 @@ export default function Gallery() {
         {list.map((list, i) => (
           <ImageWrapper key={i}>
             <Image
-              blurDataURL={list.blurDataURL}
               src={`/static${list.src}`}
               alt={list.alt}
-              placeholder="blur"
-              width={1000}
-              height={700}
+              width={600}
+              height={600}
             />
           </ImageWrapper>
         ))}
@@ -40,7 +65,9 @@ export default function Gallery() {
 const Wrapper = styled.section``;
 
 const Container = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
   align-items: center;
   max-width: 1200px;
   margin: auto;
